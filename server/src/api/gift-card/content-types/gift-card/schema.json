@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gift_cards",
+  "info": {
+    "singularName": "gift-card",
+    "pluralName": "gift-cards",
+    "displayName": "gift_card",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "gift_sections": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::gift-section.gift-section",
+      "mappedBy": "gift_cards"
+    },
+    "amount": {
+      "type": "enumeration",
+      "enum": [
+        "Ex:",
+        "m",
+        "a",
+        "b"
+      ]
+    }
+  }
+}

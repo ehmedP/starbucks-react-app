@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gift_sections",
+  "info": {
+    "singularName": "gift-section",
+    "pluralName": "gift-sections",
+    "displayName": "gift_section",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "gift_cards": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::gift-card.gift-card",
+      "inversedBy": "gift_sections"
+    }
+  }
+}
